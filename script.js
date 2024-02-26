@@ -12,12 +12,12 @@ function CheckParity (num) { // Задание 2
     }
 }
 
-function PrintSquare(c) { // Задание 3.1
-    console.log (c*c);
+function PrintSquare(num) { // Задание 3.1
+    console.log (num*num);
 }
 
-function getSquare(d) {  // Задание 3.2
-    return d*d;
+function getSquare(num) {  // Задание 3.2
+    return num*num;
 }
 
 function greetUser () {   // Задание 4
@@ -33,8 +33,8 @@ function greetUser () {   // Задание 4
 }
 
 
-function multiplyNumber(e,f) {
-    if (isNaN(e) || isNaN(f)) {
+function multiplyNumber(a,b) { // Задание 5
+    if (isNaN(a) || isNaN(b)) {
         return 'Одно или оба значения не являются числом';
     } else {
         return a*b;
@@ -42,14 +42,35 @@ function multiplyNumber(e,f) {
 }
 
 
-function cubeNumber() {
-    let g = prompt ("Введите число:")
-    g = Number(g);
-    if (isNaN(g)) {
-        return 'Не число';
+function cubeNumber() { // Задание 6
+    let num = prompt ("Введите число:")
+    num = Number(num);
+    if (isNaN(num)) {
+        return 'Не число'
     } else {
-        return `${g} в кубе равняется ${g ** 3}`;
+        return `${num} в кубе равняется ${num ** 3}`
     }
 }
 
 console.log (cubeNumber());
+
+
+function getAria() {  // Задание 7
+    return Math.PI * this.radius * this.radius;
+}
+
+function getPerimetr() {
+    return Math.PI * this.radius * 2;
+}
+
+const circle1 = {
+    radius: 5,
+    getAria,
+    getPerimetr,
+};
+
+const circle2 = {
+    radius: 10,
+    getAria,
+    getPerimetr,
+};
